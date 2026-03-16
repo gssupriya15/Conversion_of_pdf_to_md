@@ -14,4 +14,6 @@ It is easy to learn and requires less code to develop applications.
 
 [Content continues with all parsed sections from the PDF, formatted in Markdown syntax.]
 
-...
+...## Batch 1: Pages 1 to 10
+
+[Markdown content for pages 1 to 10]
