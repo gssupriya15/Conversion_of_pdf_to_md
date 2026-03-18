@@ -884,4 +884,114 @@ Python uses triple quotes to create docstrings even though the string fits on on
 def hello():   
     """A function to greet."""   
     return "hello"
+```<!-- Page 11 -->
+
+## 35) What is a negative index in Python and why are they used?
+
+The sequences in Python are indexed and it consists of the positive as well as negative numbers. The numbers that are positive uses '0' that is uses as first index and '1' as the second index and the process go on like that.
+
+The index for the negative number starts from '-1' that represents the last index in the sequence and '-2' as the penultimate index and the sequence carries forward like the positive number.
+
+The negative index is used to remove any new-line spaces from the string and allow the string to except the last character that is given as S[:-1]. The negative index is also used to show the index to represent the string in correct order.
+
+## 36) What is pickling and unpickling in Python?
+
+The Python pickle is defined as a module which accepts any Python object and converts it into a string representation. It dumps the Python object into a file using the dump function; this process is called Pickling.
+
+The process of retrieving the original Python objects from the stored string representation is called as Unpickling.
+
+## 37) Which programming language is a good choice between Java and Python?
+
+Java and Python both are object-oriented programming languages. Let's compare both on some criteria given below:
+
+| Criteria | Java | Python |
+|----------|------|--------|
+| Ease of use | Good | Very Good |
+| Coding Speed | Average | Excellent |
+| Data types | Static type | Dynamic type |
+| Data Science and Machine learning application | Average | Very Good |
+
+## 38) What is the usage of help() and dir() function in Python?
+
+Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions.
+
+**Help() function:** The help() function is used to display the documentation string and also facilitates us to see the help related to modules, keywords, and attributes.
+
+**Dir() function:** The dir() function is used to display the defined symbols.
+
+<!-- Page 12 -->
+
+## 39) What are the differences between Python 2.x and Python 3.x?
+
+Python 2.x is an older version of Python. Python 3.x is newer and latest version. Python 2.x is legacy now. Python 3.x is the present and future of this language.
+
+The most visible difference between Python2 and Python3 is in print statement (function). In Python 2, it looks like print "Hello", and in Python 3, it is print ("Hello").
+
+String in Python2 is ASCII implicitly, and in Python3 it is Unicode.
+
+The xrange() method has removed from Python 3 version. A new keyword as is introduced in Error handling.
+
+## 40) How Python does Compile-time and Run-time code checking?
+
+In Python, some amount of coding is done at compile time, but most of the checking such as type, name, etc. are postponed until code execution. Consequently, if the Python code references a user-defined function that does not exist, the code will compile successfully. The Python code will fail only with an exception when the code execution path does not exist.
+
+## 41) What is the shortest method to open a text file and display its content?
+
+The shortest way to open a text file is by using "with" command in the following manner:
+
+**Example:**
+```python
+with open("FILE NAME", "r") as fp:   
+    fileData = fp.read()     
+# To print the contents of the file      
+print(fileData)
 ```
+
+**Output:**
+```
+"The data of the file will be printed."
+```
+
+## 42) What is the usage of enumerate () function in Python?
+
+The enumerate() function is used to iterate through the sequence and retrieve the index position and its corresponding value at the same time.
+
+**Example:**
+```python
+list_1 = ["A","B","C"]   
+s_1 = "Javatpoint"    
+# creating enumerate objects   
+object_1 = enumerate(list_1)   
+object_2 = enumerate(s_1)   
+    
+print ("Return type:",type(object_1))   
+print (list(enumerate(list_1)))   
+print (list(enumerate(s_1)))
+```
+
+**Output:**
+```
+Return type:  
+[(0, 'A'), (1, 'B'), (2, 'C')]
+[(0, 'J'), (1, 'a'), (2, 'v'), (3, 'a'), (4, 't'), (5, 'p'), (6, 'o'), (7, 'i'), (8, 'n'), (9, 't')]
+```
+
+## 43) Give the output of this example: A[3] if A=[1,4,6,7,9,66,4,94].
+
+Since indexing starts from zero, an element present at 3rd index is 7. So, the output is 7.
+
+## 44) What is type conversion in Python?
+
+Type conversion refers to the conversion of one data type iinto another.
+
+- **int()** - converts any data type into integer type
+- **float()** - converts any data type into float type
+- **ord()** - converts characters into integer
+- **hex()** - converts integers to hexadecimal
+- **oct()** - converts integer to octal
+- **tuple()** - This function is used to convert to a tuple.
+- **set()** - This function returns the type after converting to set.
+- **list()** - This function is used to convert any data type to a list type.
+- **dict()** - This function is used to convert a tuple of order (key,value) into a dictionary.
+- **str()** - Used to convert integer into a string.
+- **complex(real,imag)** - This functionconverts real numbers to complex(real,imag) number.
