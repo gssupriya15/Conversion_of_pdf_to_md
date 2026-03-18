@@ -322,4 +322,179 @@ After deleting: [3, 5, 3, 9, 3]
 
 **Note:** You don't need to import any extra module to use these functions for removing an element from the list.
 
-We cannot use these methods with a tuple because the tuple is different from the list.
+We cannot use these methods with a tuple because the tuple is different from the list.<!-- Page 5 -->
+
+## 12) What is swapcase() function in the Python?
+
+It is a string's function which converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. If the string is in lowercase, it generates a small case string and vice versa. It automatically ignores all the non-alphabetic characters. See an example below.
+
+Example:
+
+```python
+string = "IT IS IN LOWERCASE."
+print(string.swapcase())
+
+string = "it is in uppercase."
+print(string.swapcase())
+```
+
+Output:
+```
+it is in lowercase.
+IT IS IN UPPERCASE.
+```
+
+## 13) How to remove whitespaces from a string in Python?
+
+To remove the whitespaces and trailing spaces from the string, Python providies strip([str]) built-in function. This function returns a copy of the string after removing whitespaces if present. Otherwise returns original string.
+
+Example:
+
+```python
+string = "  javatpoint "
+string2 = "    javatpoint        "
+string3 = "       javatpoint"
+print(string)
+print(string2)
+print(string3)
+print("After stripping all have placed in a sequence:")
+print(string.strip())
+print(string2.strip())
+print(string3.strip())
+```
+
+Output:
+```
+javatpoint
+    javatpoint
+       javatpoint
+After stripping all have placed in a sequence:
+Javatpoint
+javatpoint
+javatpoint
+```
+
+## 14) How to remove leading whitespaces from a string in the Python?
+
+To remove leading characters from a string, we can use lstrip() function. It is Python string function which takes an optional char type parameter. If a parameter is provided, it removes the character. Otherwise, it removes all the leading spaces from the string.
+
+Example:
+
+```python
+string = "  javatpoint "
+string2 = "    javatpoint        "
+print(string)
+print(string2)
+print("After stripping all leading whitespaces:")
+print(string.lstrip())
+print(string2.lstrip())
+```
+
+Output:
+```
+javatpoint
+    javatpoint
+After stripping all leading whitespaces:
+javatpoint
+javatpoint
+```
+
+**[Image: Page 5]:**
+Before and after comparison showing string with leading whitespaces. Top shows "    javatpoint        " with arrows pointing to leading spaces. Bottom shows "javatpoint        " after lstrip() with leading spaces removed but trailing spaces remain.
+
+After stripping, all the whitespaces are removed, and now the string looks like the below:
+
+**[Image: Page 5]:**
+Final result showing "javatpoint" with all whitespaces removed using strip() function.
+
+## 15) Why do we use join() function in Python?
+
+The join() is defined as a string method which returns a string value. It is concatenated with the elements of an iterable. It provides a flexible way to concatenate the strings. See an example below.
+
+Example:
+
+```python
+str = "Rohan"
+str2 = "ab"
+# Calling function
+str2 = str.join(str2)
+# Displaying result
+print(str2)
+```
+
+Output:
+```
+aRohanb
+```
+
+<!-- Page 6 -->
+
+## 16) Give an example of shuffle() method?
+
+This method shuffles the given string or an array. It randomizes the items in the array. This method is present in the random module. So, we need to import it and then we can call the function. It shuffles elements each time when the function calls and produces different output.
+
+Example:
+
+```python
+# import the random module
+import random
+# declare a list
+sample_list1 = ['Z', 'Y', 'X', 'W', 'V', 'U']
+print("Original LIST1: ")
+print(sample_list1)
+# first shuffle
+random.shuffle(sample_list1)
+print("\nAfter the first shuffle of LIST1: ")
+print(sample_list1)
+# second shuffle
+random.shuffle(sample_list1)
+print("\nAfter the second shuffle of LIST1: ")
+print(sample_list1)
+```
+
+Output:
+```
+Original LIST1:
+['Z', 'Y', 'X', 'W', 'V', 'U']
+
+After the first shuffle of LIST1:
+['V', 'U', 'W', 'X', 'Y', 'Z']
+
+After the second shuffle of LIST1:
+['Z', 'Y', 'X', 'U', 'V', 'W']
+```
+
+## 17) What is the use of break statement?
+
+The break statement is used to terminate the execution of the current loop. Break always breaks the current execution and transfer control to outside the current block. If the block is in a loop, it exits from the loop, and if the break is in a nested loop, it exits from the innermost loop.
+
+Example:
+
+```python
+list_1 = ['X', 'Y', 'Z']
+list_2 = [11, 22, 33]
+for i in list_1:
+    for j in list_2:
+        print(i, j)
+        if i == 'Y' and j == 33:
+            print('BREAK')
+            break
+    else:
+        continue
+    break
+```
+
+Output:
+```
+2
+X 11
+X 22
+X 33
+Y 11
+Y 22
+Y 33
+BREAK
+```
+
+**[Image: Page 6]:**
+Python Break statement flowchart showing the flow of execution. Starts with "Start", flows to "Loop Condition" (diamond shape). If True, goes to "Statement Block", then checks "Break Condition" (diamond). If Break Condition is True, exits to "Outside Loop". If False, loops back to "Loop Condition". If Loop Condition is False, also goes to "Outside Loop", then "End".
