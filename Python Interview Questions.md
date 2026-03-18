@@ -752,4 +752,136 @@ JavaTpoint
 
 **Functions vs. Decorators**
 
-A function is a block of code that performs a specific task whereas a decorator is a function that modifies other functions.
+A function is a block of code that performs a specific task whereas a decorator is a function that modifies other functions.<!-- Page 9 -->
+
+## 27) What are the rules for a local and global variable in Python?
+
+### Global Variables:
+
+- Variables declared outside a function or in global space are called global variables.
+- If a variable is ever assigned a new value inside the function, the variable is implicitly local, and we need to declare it as 'global' explicitly. To make a variable globally, we need to declare it by using global keyword.
+- Global variables are accessible anywhere in the program, and any function can access and modify its value.
+
+**Example:**
+```python
+A = "JavaTpoint"   
+def my_function():   
+  print(A)   
+my_function()
+```
+
+**Output:**
+```
+JavaTpoint
+```
+
+### Local Variables:
+
+- Any variable declared inside a function is known as a local variable. This variable is present in the local space and not in the global space.
+- If a variable is assigned a new value anywhere within the function's body, it's assumed to be a local.
+- Local variables are accessible within local body only.
+
+**Example:**
+```python
+def my_function2():   
+    K = "JavaTpoint Local"   
+    print(K)   
+my_function2()
+```
+
+**Output:**
+```
+JavaTpoint Local
+```
+
+## 28) What is the namespace in Python?
+
+The namespace is a fundamental idea to structure and organize the code that is more useful in large projects. However, it could be a bit difficult concept to grasp if you're new to programming. Hence, we tried to make namespaces just a little easier to understand.
+
+A namespace is defined as a simple system to control the names in a program. It ensures that names are unique and won't lead to any conflict.
+
+Also, Python implements namespaces in the form of dictionaries and maintains name-to-object mapping where names act as keys and the objects as values.
+
+## 29) What are iterators in Python?
+
+In Python, iterators are used to iterate a group of elements, containers like a list. Iterators are the collection of items, and it can be a list, tuple, or a dictionary. Python iterator implements __itr__ and next() method to iterate the stored elements. In Python, we generally use loops to iterate over the collections (list, tuple).
+
+In simple words: Iterators are objects which can be traversed though or iterated upon.
+
+## 30) What is a generator in Python?
+
+In Python, the generator is a way that specifies how to implement iterators. It is a normal function except that it yields expression in the function. It does not implements __itr__ and next() method and reduce other overheads as well.
+
+If a function contains at least a yield statement, it becomes a generator. The yield keyword pauses the current execution by saving its states and then resume from the same when required.
+
+<!-- Page 10 -->
+
+## 31) What is slicing in Python?
+
+Slicing is a mechanism used to select a range of items from sequence type like list, tuple, and string. It is beneficial and easy to get elements from a range by using slice way. It requires a : (colon) which separates the start and end index of the field. All the data collection types List or tuple allows us to use slicing to fetch elements. Although we can get elements by specifying an index, we get only single element whereas using slicing we can get a group of elements.
+
+**Example:**
+```python
+Q = "JavaTpoint, Python Interview Questions!"   
+print(Q[2:25])
+```
+
+**Output:**
+```
+vaTpoint, Python Interv
+```
+
+## 32) What is a dictionary in Python?
+
+The Python dictionary is a built-in data type. It defines a one-to-one relationship between keys and values. Dictionaries contain a pair of keys and their corresponding values. It stores elements in key and value pairs. The keys are unique whereas values can be duplicate. The key accesses the dictionary elements.
+
+Keys index dictionaries.
+
+**Example:**
+
+The following example contains some keys Country Hero & Cartoon. Their corresponding values are India, Modi, and Rahul respectively.
+
+```python
+dict = {'Country': 'India', 'Hero': 'Modi', 'Cartoon': 'Rahul'}   
+print ("Country: ", dict['Country'])     
+print ("Hero: ", dict['Hero'])   
+print ("Cartoon: ", dict['Cartoon'])
+```
+
+**Output:**
+```
+Country:  India
+Hero:  Modi
+Cartoon:  Rahul
+```
+
+## 33) What is Pass in Python?
+
+Pass specifies a Python statement without operations. It is a placeholder in a compound statement. If we want to create an empty class or functions, the pass keyword helps to pass the control without error.
+
+**Example:**
+```python
+class Student:    
+    pass # Passing class     
+class Student:     
+    def info():   
+        pass # Passing function
+```
+
+## 34) Explain docstring in Python?
+
+The Python docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. It provides a convenient way to associate the documentation.
+
+String literals occurring immediately after a simple assignment at the top are called "attribute docstrings".
+
+String literals occurring immediately after another docstring are called "additional docstrings".
+
+Python uses triple quotes to create docstrings even though the string fits on one line. Docstring phrase ends with a period (.) and can be multiple lines. It may consist of spaces and other special chars.
+
+**Example:**
+```python
+# One-line docstrings   
+def hello():   
+    """A function to greet."""   
+    return "hello"
+```
