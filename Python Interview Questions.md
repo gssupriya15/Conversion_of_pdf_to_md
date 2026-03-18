@@ -1028,3 +1028,94 @@ Memory is managed in Python in the following ways:
 - Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
 - The allocation of heap space for Python objects is done by Python's memory manager. The core API gives access to some tools for the programmer to code.
 - Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+
+---
+<!-- Batch 5 ends | Batch 6 begins -->
+---
+
+## 26) What is the Python decorator?
+
+Decorators are very powerful and a useful tool in Python that allows the programmers to add functionality to an existing code. This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time. It allows the user to wrap another function to extend the behaviour of the wrapped function, without permanently modifying it.
+
+**Example:**
+
+```python
+def function_is_called():   
+    def function_is_returned():   
+        print("JavaTpoint")   
+    return function_is_returned   
+new_1 = function_is_called()   
+# Outputs "JavaTpoint"   
+new_1()
+```
+
+**Output:**
+```
+JavaTpoint
+```
+
+**Functions vs. Decorators**
+
+A function is a block of code that performs a specific task whereas a decorator is a function that modifies other functions.
+
+## 27) What are the rules for a local and global variable in Python?
+
+### Global Variables:
+
+- Variables declared outside a function or in global space are called global variables.
+- If a variable is ever assigned a new value inside the function, the variable is implicitly local, and we need to declare it as 'global' explicitly. To make a variable globally, we need to declare it by using global keyword.
+- Global variables are accessible anywhere in the program, and any function can access and modify its value.
+
+**Example:**
+
+```python
+A = "JavaTpoint"   
+def my_function():   
+  print(A)   
+my_function()
+```
+
+**Output:**
+```
+JavaTpoint
+```
+
+### Local Variables:
+
+- Any variable declared inside a function is known as a local variable. This variable is present in the local space and not in the global space.
+- If a variable is assigned a new value anywhere within the function's body, it's assumed to be a local.
+- Local variables are accessible within local body only.
+
+**Example:**
+
+```python
+def my_function2():   
+    K = "JavaTpoint Local"   
+    print(K)   
+my_function2()
+```
+
+**Output:**
+```
+JavaTpoint Local
+```
+
+## 28) What is the namespace in Python?
+
+The namespace is a fundamental idea to structure and organize the code that is more useful in large projects. However, it could be a bit difficult concept to grasp if you're new to programming. Hence, we tried to make namespaces just a little easier to understand.
+
+A namespace is defined as a simple system to control the names in a program. It ensures that names are unique and won't lead to any conflict.
+
+Also, Python implements namespaces in the form of dictionaries and maintains name-to-object mapping where names act as keys and the objects as values.
+
+## 29) What are iterators in Python?
+
+In Python, iterators are used to iterate a group of elements, containers like a list. Iterators are the collection of items, and it can be a list, tuple, or a dictionary. Python iterator implements __itr__ and next() method to iterate the stored elements. In Python, we generally use loops to iterate over the collections (list, tuple).
+
+In simple words: Iterators are objects which can be traversed though or iterated upon.
+
+## 30) What is a generator in Python?
+
+In Python, the generator is a way that specifies how to implement iterators. It is a normal function except that it yields expression in the function. It does not implements __itr__ and next() method and reduce other overheads as well.
+
+If a function contains at least a yield statement, it becomes a generator. The yield keyword pauses the current execution by saving its states and then resume from the same when required.
