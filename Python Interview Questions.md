@@ -497,4 +497,163 @@ BREAK
 ```
 
 **[Image: Page 6]:**
-Python Break statement flowchart showing the flow of execution. Starts with "Start", flows to "Loop Condition" (diamond shape). If True, goes to "Statement Block", then checks "Break Condition" (diamond). If Break Condition is True, exits to "Outside Loop". If False, loops back to "Loop Condition". If Loop Condition is False, also goes to "Outside Loop", then "End".
+Python Break statement flowchart showing the flow of execution. Starts with "Start", flows to "Loop Condition" (diamond shape). If True, goes to "Statement Block", then checks "Break Condition" (diamond). If Break Condition is True, exits to "Outside Loop". If False, loops back to "Loop Condition". If Loop Condition is False, also goes to "Outside Loop", then "End".<!-- Page 7 -->
+
+## 18) What is tuple in Python?
+
+A tuple is a built-in data collection type. It allows us to store values in a sequence. It is immutable, so no change is reflected in the original data. It uses () brackets rather than [] square brackets to create a tuple. We cannot remove any element but can find in the tuple. We can use indexing to get elements. It also allows traversing elements in reverse order by using negative indexing. Tuple supports various methods like max(), sum(), sorted(), Len() etc.
+
+To create a tuple, we can declare it as below.
+
+Example:
+
+```python
+# Declaring tuple
+tup = (2,4,6,8)
+# Displaying value
+print(tup)
+
+# Displaying Single value
+print(tup[2])
+```
+
+Output:
+```
+(2, 4, 6, 8)
+6
+```
+
+**[Image: Page 7]:**
+Diagram showing tuple structure with indices. Shows tuple (2, 4, 6, 8) with index numbers 0, 1, 2, 3 above each element. Arrow pointing to index 2 showing value 6 being accessed.
+
+It is immutable. So updating tuple will lead to an error.
+
+Example:
+
+```python
+# Declaring tuple
+tup = (2,4,6,8)
+# Displaying value
+print(tup)
+
+# Displaying Single value
+print(tup[2])
+
+# Updating by assigning new value
+tup[2]=22
+# Displaying Single value
+print(tup[2])
+```
+
+Output:
+```
+tup[2]=22
+TypeError: 'tuple' object does not support item assignment
+(2, 4, 6, 8)
+```
+
+**[Image: Page 7]:**
+Error illustration showing tuple immutability. Shows tuple (2, 4, 6, 8) with a red X mark over an attempt to change index 2 to value 22, with error message "TypeError: 'tuple' object does not support item assignment" displayed.
+
+## 19) Which are the file related libraries/modules in Python?
+
+The Python provides libraries/modules that enable you to manipulate text files and binary files on the file system. It helps to create files, update their contents, copy, and delete files. The libraries are os, os.path, and shutil.
+
+Here, os and os.path - modules include a function for accessing the filesystem while shutil - module enables you to copy and delete the files.
+
+<!-- Page 8 -->
+
+## 20) What are the different file processing modes supported by Python?
+
+Python provides four modes to open files. The read-only (r), write-only (w), read-write (rw) and append mode (a). 'r' is used to open a file in read-only mode, 'w' is used to open a file in write-only mode, 'rw' is used to open in reading and write mode, 'a' is used to open a file in append mode. If the mode is not specified, by default file opens in read-only mode.
+
+- Read-only mode (r): Open a file for reading. It is the default mode.
+- Write-only mode (w): Open a file for writing. If the file contains data, data would be lost. Other a new file is created.
+- Read-Write mode (rw): Open a file for reading, write mode. It means updating mode.
+- Append mode (a): Open for writing, append to the end of the file, if the file exists.
+
+## 21) What is an operator in Python?
+
+An operator is a particular symbol which is used on some values and produces an output as a result. An operator works on operands. Operands are numeric literals or variables which hold some values. Operators can be unary, binary or ternary. An operator which requires a single operand known as a unary operator, which require two operands known as a binary operator and which require three operands is called ternary operator.
+
+**[Image: Page 8]:**
+Diagram showing three types of operators:
+1. Unary Operator: Shows "-A" with single operand A
+2. Binary Operator: Shows "A + B" with two operands A and B
+3. Ternary Operator: Shows "A if condition else B" with three parts
+
+Example:
+
+```python
+# Unary Operator
+A = 12
+B = -(A)
+print (B)
+# Binary Operator
+A = 12
+B = 13
+print (A + B)
+print (B * A)
+#Ternary Operator
+A = 12
+B = 13
+min = A if A < B else B
+
+print(min)
+```
+
+Output:
+```
+# Unary Operator
+-12
+# Binary Operator
+25
+156
+# Ternary Operator
+12
+```
+
+## 22) What are the different types of operators in Python?
+
+Python uses a rich set of operators to perform a variety of operations. Some individual operators like membership and identity operators are not so familiar but allow to perform operations.
+
+- Arithmetic Operators
+- Relational Operators
+- Assignment Operators
+- Logical Operators
+- Membership Operators
+- Identity Operators
+- Bitwise Operators
+
+**[Image: Page 8]:**
+Diagram showing Python operators in a mind map format. Central node "Python Operators" with seven branches:
+1. Arithmetic (+, -, *, /, %, **, //)
+2. Relational (==, !=, >, <, >=, <=)
+3. Assignment (=, +=, -=, *=, /=, %=, **=, //=)
+4. Logical (and, or, not)
+5. Membership (in, not in)
+6. Identity (is, is not)
+7. Bitwise (&, |, ^, ~, <<, >>)
+
+Arithmetic operators perform basic arithmetic operations. For example "+" is used to add and "?" is used for subtraction.
+
+Example:
+
+```python
+# Adding two values
+print(12+23)
+# Subtracting two values
+print(12-23)
+# Multiplying two values
+print(12*23)
+# Dividing two values
+print(12/23)
+```
+
+Output:
+```
+35
+-11
+276
+0.5217391304347826
+```
