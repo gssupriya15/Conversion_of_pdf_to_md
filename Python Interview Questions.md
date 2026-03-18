@@ -1113,4 +1113,52 @@ The statement random.random() method return the floating point number that is in
 
 **normalvariate(mean, sdev):** it is used for the normal distribution where the mu is a mean and the sdev is a sigma that is used for standard deviation.
 
-The Random class that is used and instantiated creates independent multiple random number generators.
+The Random class that is used and instantiated creates independent multiple random number generators.<!-- Page 15 -->
+
+## 53) What is PYTHONPATH?
+
+PYTHONPATH is an environment variable which is used when a module is imported. Whenever a module is imported, PYTHONPATH is also looked up to check for the presence of the imported modules in various directories. The interpreter uses it to determine which module to load.
+
+## 54) What are python modules? Name some commonly used built-in modules in Python?
+
+Python modules are files containing Python code. This code can either be functions classes or variables. A Python module is a .py file containing executable code.
+
+Some of the commonly used built-in modules are:
+
+- os
+- sys
+- math
+- random
+- data time
+- JSON
+
+## 55) What is the difference between range & xrange?
+
+For the most part, xrange and range are the exact same in terms of functionality. They both provide a way to generate a list of integers for you to use, however you please. The only difference is that range returns a Python list object and x range returns an xrange object.
+
+This means that xrange doesn't actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding. This technique is used with a type of object known as generators. That means that if you have a really gigantic range you'd like to generate a list for, say one billion, xrange is the function to use.
+
+This is especially true if you have a really memory sensitive system such as a cell phone that you are working with, as range will use as much memory as it can to create your array of integers, which can result in a Memory Error and crash your program. It's a memory hungry beast.
+
+## 56) What advantages do NumPy arrays offer over (nested) Python lists?
+
+- Python's lists are efficient general-purpose containers. They support (fairly) efficient insertion, deletion, appending, and concatenation, and Python's list comprehensions make them easy to construct and manipulate.
+- They have certain limitations: they don't support "vectorized" operations like elementwise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
+- NumPy is not just more efficient; it is also more convenient. We get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work. And they are also efficiently implemented.
+- NumPy array is faster and we get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc.
+
+<!-- Page 16 -->
+
+## 57) Mention what the Django templates consist of.
+
+The template is a simple text file. It can create any text-based format like XML, CSV, HTML, etc. A template contains variables that get replaced with values when the template is evaluated and tags (% tag %) that control the logic of the template.
+
+## 58) Explain the use of session in Django framework?
+
+Django provides a session that lets the user store and retrieve data on a per-site-visitor basis. Django abstracts the process of sending and receiving cookies, by placing a session ID cookie on the client side, and storing all the related data on the server side.
+
+So, the data itself is not stored client side. This is good from a security perspective.
+
+---
+
+**End of Document**
