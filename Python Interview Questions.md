@@ -994,4 +994,123 @@ Type conversion refers to the conversion of one data type iinto another.
 - **list()** - This function is used to convert any data type to a list type.
 - **dict()** - This function is used to convert a tuple of order (key,value) into a dictionary.
 - **str()** - Used to convert integer into a string.
-- **complex(real,imag)** - This functionconverts real numbers to complex(real,imag) number.
+- **complex(real,imag)** - This functionconverts real numbers to complex(real,imag) number.<!-- Page 13 -->
+
+## 45) How to send an email in Python Language?
+
+To send an email, Python provides smtplib and email modules. Import these modules into the created mail script and send mail by authenticating a user.
+
+It has a method SMTP(smtp-server, port). It requires two parameters to establish SMTP connection.
+
+A simple example to send an email is given below.
+
+**Example:**
+```python
+import smtplib     
+# Calling SMTP     
+s = smtplib.SMTP('smtp.gmail.com', 587)     
+# TLS for network security     
+s.starttls()     
+# User email Authentication     
+s.login("sender@email_id", "sender_email_id_password")     
+# Message to be sent     
+message = "Message_sender_need_to_send"     
+# Sending the mail     
+s.sendmail("sender@email_id ", "receiver@email_id", message)
+```
+
+## 46) What is the difference between Python Arrays and lists?
+
+Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
+
+**Example:**
+```python
+import array as arr   
+User_Array = arr.array('i', [1,2,3,4])   
+User_list = [1, 'abc', 1.20]   
+print (User_Array)   
+print (User_list)
+```
+
+**Output:**
+```
+array('i', [1, 2, 3, 4])
+[1, 'abc', 1.2]
+```
+
+## 47) What is lambda function in Python?
+
+The anonymous function in python is a function that is defined without a name. The normal functions are defined using a keyword "def", whereas, the anonymous functions are defined using the lambda function. The anonymous functions are also called as lambda functions.
+
+## 48) Why do lambda forms in Python not have the statements?
+
+Lambda forms in Python does not have the statement because it is used to make the new function object and return them in runtime.
+
+<!-- Page 14 -->
+
+## 49) What are functions in Python?
+
+A function is a block of code which is executed only when it is called. To define a Python function, the def keyword is used.
+
+**Example:**
+```python
+def New_func():   
+    print ("Hi, Welcome to JavaTpoint")   
+New_func() #calling the function
+```
+
+**Output:**
+```
+Hi, Welcome to JavaTpoint
+```
+
+## 50) What is __init__?
+
+The __init__ is a method or constructor in Python. This method is automatically called to allocate memory when a new object/ instance of a class is created. All classes have the __init__ method.
+
+**Example:**
+```python
+class Employee_1:   
+    def __init__(self, name, age,salary):   
+        self.name = name   
+        self.age = age   
+        self.salary = 20000   
+E_1 = Employee_1("pqr", 20, 25000)   
+# E1 is the instance of class Employee.   
+#__init__ allocates memory for E1.    
+print(E_1.name)   
+print(E_1.age)   
+print(E_1.salary)
+```
+
+**Output:**
+```
+pqr
+20
+25000
+```
+
+## 51) What is self in Python?
+
+Self is an instance or an object of a class. In Python, this is explicitly included as the first parameter. However, this is not the case in Java where it's optional. It helps to differentiate between the methods and attributes of a class with local variables.
+
+The self-variable in the init method refers to the newly created object while in other methods, it refers to the object whose method was called.
+
+## 52) How can you generate random numbers in Python?
+
+Random module is the standard module that is used to generate a random number. The method is defined as:
+
+```python
+import random   
+random.random
+```
+
+The statement random.random() method return the floating point number that is in the range of [0, 1). The function generates random float numbers. The methods that are used with the random class are the bound methods of the hidden instances. The instances of the Random can be done to show the multi-threading programs that creates a different instance of individual threads. The other random generators that are used in this are:
+
+**randrange(a, b):** it chooses an integer and define the range in-between [a, b). It returns the elements by selecting it randomly from the range that is specified. It doesn't build a range object.
+
+**uniform(a, b):** it chooses a floating point number that is defined in the range of [a,b).Iyt returns the floating point number
+
+**normalvariate(mean, sdev):** it is used for the normal distribution where the mu is a mean and the sdev is a sigma that is used for standard deviation.
+
+The Random class that is used and instantiated creates independent multiple random number generators.
