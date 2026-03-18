@@ -1119,3 +1119,88 @@ In simple words: Iterators are objects which can be traversed though or iterated
 In Python, the generator is a way that specifies how to implement iterators. It is a normal function except that it yields expression in the function. It does not implements __itr__ and next() method and reduce other overheads as well.
 
 If a function contains at least a yield statement, it becomes a generator. The yield keyword pauses the current execution by saving its states and then resume from the same when required.
+
+---
+<!-- Batch 6 ends | Batch 7 begins -->
+---
+
+## 31) What is slicing in Python?
+
+Slicing is a mechanism used to select a range of items from sequence type like list, tuple, and string. It is beneficial and easy to get elements from a range by using slice way. It requires a : (colon) which separates the start and end index of the field. All the data collection types List or tuple allows us to use slicing to fetch elements. Although we can get elements by specifying an index, we get only single element whereas using slicing we can get a group of elements.
+
+**Example:**
+
+```python
+Q = "JavaTpoint, Python Interview Questions!"   
+print(Q[2:25])
+```
+
+**Output:**
+```
+vaTpoint, Python Interv
+```
+
+## 32) What is a dictionary in Python?
+
+The Python dictionary is a built-in data type. It defines a one-to-one relationship between keys and values. Dictionaries contain a pair of keys and their corresponding values. It stores elements in key and value pairs. The keys are unique whereas values can be duplicate. The key accesses the dictionary elements.
+
+Keys index dictionaries.
+
+**Example:**
+
+The following example contains some keys Country Hero & Cartoon. Their corresponding values are India, Modi, and Rahul respectively.
+
+```python
+dict = {'Country': 'India', 'Hero': 'Modi', 'Cartoon': 'Rahul'}   
+print ("Country: ", dict['Country'])     
+print ("Hero: ", dict['Hero'])   
+print ("Cartoon: ", dict['Cartoon'])
+```
+
+**Output:**
+```
+Country:  India 
+Hero:  Modi 
+Cartoon:  Rahul
+```
+
+## 33) What is Pass in Python?
+
+Pass specifies a Python statement without operations. It is a placeholder in a compound statement. If we want to create an empty class or functions, the pass keyword helps to pass the control without error.
+
+**Example:**
+
+```python
+class Student:    
+    pass # Passing class     
+class Student:     
+    def info():   
+        pass # Passing function
+```
+
+## 34) Explain docstring in Python?
+
+The Python docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. It provides a convenient way to associate the documentation.
+
+String literals occurring immediately after a simple assignment at the top are called "attribute docstrings".
+
+String literals occurring immediately after another docstring are called "additional docstrings".
+
+Python uses triple quotes to create docstrings even though the string fits on one line. Docstring phrase ends with a period (.) and can be multiple lines. It may consist of spaces and other special chars.
+
+**Example:**
+
+```python
+# One-line docstrings   
+def hello():   
+    """A function to greet."""   
+    return "hello"
+```
+
+## 35) What is a negative index in Python and why are they used?
+
+The sequences in Python are indexed and it consists of the positive as well as negative numbers. The numbers that are positive uses '0' that is uses as first index and '1' as the second index and the process go on like that.
+
+The index for the negative number starts from '-1' that represents the last index in the sequence and '-2' as the penultimate index and the sequence carries forward like the positive number.
+
+The negative index is used to remove any new-line spaces from the string and allow the string to except the last character that is given as S[:-1]. The negative index is also used to show the index to represent the string in correct order.
