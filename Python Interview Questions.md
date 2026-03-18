@@ -187,4 +187,195 @@ There are three types of functions:
 def function_name(parameters list):     
     #--- statements---     
     return a_value
+```<!-- Page 3 -->
+
+## 8) What is zip() function in Python?
+
+Python zip() function returns a zip object, which maps a similar index of multiple containers. It takes an iterable, convert into iterator and aggregates the elements based on iterables passed. It returns an iterator of tuples.
+
+**Signature:**
+```python
+zip(iterator1, iterator2, iterator3 ...)
+```
+
+**Parameters:**
+iterator1, iterator2, iterator3: These are iterator objects that are joined together.
+
+**Return:**
+It returns an iterator from two or more iterators.
+
+**Note:** If the given lists are of different lengths, zip stops generating tuples when the first list ends. It means two lists are having 3, and 5 lengths will create a 3-tuple.
+
+## 9) What is Python's parameter passing mechanism?
+
+There are two parameters passing mechanism in Python:
+
+- Pass by references
+- Pass by value
+
+By default, all the parameters (arguments) are passed "by reference" to the functions. Thus, if you change the value of the parameter within a function, the change is reflected in the calling function as well. It indicates the original variable. For example, if a variable is declared as a = 10, and passed to a function where it's value is modified to a = 20. Both the variables denote to the same value.
+
+The pass by value is that whenever we pass the arguments to the function only values pass to the function, no reference passes to the function. It makes it immutable that means not changeable. Both variables hold the different values, and original value persists even after modifying in the function.
+
+Python has a default argument concept which helps to call a method using an arbitrary number of arguments.
+
+## 10) How to overload constructors or methods in Python?
+
+Python's constructor: _init__ () is the first method of a class. Whenever we try to instantiate an object __init__() is automatically invoked by python to initialize members of an object. We can't overload constructors or methods in Python. It shows an error if we try to overload.
+
+**Example:**
+```python
+class student:     
+    def __init__(self, name):     
+        self.name = name     
+    def __init__(self, name, email):     
+        self.name = name     
+        self.email = email     
+          
+# This line will generate an error     
+#st = student("rahul")     
+     
+# This line will call the second constructor     
+st = student("rahul", "rahul@gmail.com")     
+print("Name: ", st.name)   
+print("Email id: ", st.email)
+```
+
+**Output:**
+```
+Name:  rahul
+Email id:  rahul@gmail.com
+```
+
+## 11) What is the difference between remove() function and del statement?
+
+The user can use the remove() function to delete a specific object in the list.
+
+**Example:**
+```python
+list_1 = [ 3, 5, 7, 3, 9, 3 ]    
+print(list_1)   
+list_1.remove(3)    
+print("After removal: ", list_1)
+```
+
+**Output:**
+```
+[3, 5, 7, 3, 9, 3]
+After removal: [5, 7, 3, 9, 3]
+```
+
+If you want to delete an object at a specific location (index) in the list, you can either use del or pop.
+
+**Example:**
+```python
+list_1 = [ 3, 5, 7, 3, 9, 3 ]    
+print(list_1)   
+del list_1[2]   
+print("After deleting: ", list_1)
+```
+
+**Output:**
+```
+[3, 5, 7, 3, 9, 3]
+After deleting: [3, 5, 3, 9, 3]
+```
+
+**Note:** You don't need to import any extra module to use these functions for removing an element from the list.
+
+We cannot use these methods with a tuple because the tuple is different from the list.
+
+<!-- Page 4 -->
+
+## 12) What is swapcase() function in the Python?
+
+It is a string's function which converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. If the string is in lowercase, it generates a small case string and vice versa. It automatically ignores all the non-alphabetic characters. See an example below.
+
+**Example:**
+```python
+string = "IT IS IN LOWERCASE."   
+print(string.swapcase())   
+   
+string = "it is in uppercase."   
+print(string.swapcase())
+```
+
+**Output:**
+```
+it is in lowercase.  
+IT IS IN UPPERCASE.
+```
+
+## 13) How to remove whitespaces from a string in Python?
+
+To remove the whitespaces and trailing spaces from the string, Python providies strip([str]) built-in function. This function returns a copy of the string after removing whitespaces if present. Otherwise returns original string.
+
+**Example:**
+```python
+string = "  javatpoint "   
+string2 = "    javatpoint        "   
+string3 = "       javatpoint"   
+print(string)   
+print(string2)   
+print(string3)   
+print("After stripping all have placed in a sequence:")   
+print(string.strip())   
+print(string2.strip())   
+print(string3.strip())
+```
+
+**Output:**
+```
+javatpoint  
+    javatpoint         
+       javatpoint
+After stripping all have placed in a sequence:
+Javatpoint
+javatpoint
+javatpoint
+```
+
+## 14) How to remove leading whitespaces from a string in the Python?
+
+To remove leading characters from a string, we can use lstrip() function. It is Python string function which takes an optional char type parameter. If a parameter is provided, it removes the character. Otherwise, it removes all the leading spaces from the string.
+
+**Example:**
+```python
+string = "  javatpoint "    
+string2 = "    javatpoint        "   
+print(string)   
+print(string2)   
+print("After stripping all leading whitespaces:")   
+print(string.lstrip())   
+print(string2.lstrip())
+```
+
+**Output:**
+```
+javatpoint  
+    javatpoint         
+After stripping all leading whitespaces:
+javatpoint  
+javatpoint
+```
+
+After stripping, all the whitespaces are removed, and now the string looks like the below:
+
+## 15) Why do we use join() function in Python?
+
+The join() is defined as a string method which returns a string value. It is concatenated with the elements of an iterable. It provides a flexible way to concatenate the strings. See an example below.
+
+**Example:**
+```python
+str = "Rohan"   
+str2 = "ab"   
+# Calling function     
+str2 = str.join(str2)     
+# Displaying result     
+print(str2)
+```
+
+**Output:**
+```
+aRohanb
 ```
