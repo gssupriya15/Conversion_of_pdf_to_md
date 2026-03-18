@@ -378,4 +378,170 @@ print(str2)
 **Output:**
 ```
 aRohanb
+```<!-- Page 5 -->
+
+## 16) Give an example of shuffle() method?
+
+This method shuffles the given string or an array. It randomizes the items in the array. This method is present in the random module. So, we need to import it and then we can call the function. It shuffles elements each time when the function calls and produces different output.
+
+**Example:**
+```python
+# import the random module   
+import random   
+# declare a list   
+sample_list1 = ['Z', 'Y', 'X', 'W', 'V', 'U']   
+print("Original LIST1: ")   
+print(sample_list1)   
+# first shuffle    
+random.shuffle(sample_list1)   
+print("\nAfter the first shuffle of LIST1: ")   
+print(sample_list1)   
+# second shuffle   
+random.shuffle(sample_list1)   
+print("\nAfter the second shuffle of LIST1: ")   
+print(sample_list1)
+```
+
+**Output:**
+```
+Original LIST1:  
+['Z', 'Y', 'X', 'W', 'V', 'U']
+
+After the first shuffle of LIST1:  
+['V', 'U', 'W', 'X', 'Y', 'Z']
+
+After the second shuffle of LIST1:  
+['Z', 'Y', 'X', 'U', 'V', 'W']
+```
+
+## 17) What is the use of break statement?
+
+The break statement is used to terminate the execution of the current loop. Break always breaks the current execution and transfer control to outside the current block. If the block is in a loop, it exits from the loop, and if the break is in a nested loop, it exits from the innermost loop.
+
+**Example:**
+```python
+list_1 = ['X', 'Y', 'Z']   
+list_2 = [11, 22, 33]   
+for i in list_1:   
+    for j in list_2:   
+        print(i, j)   
+        if i == 'Y' and j == 33:   
+            print('BREAK')   
+            break   
+    else:   
+        continue   
+    break
+```
+
+**Output:**
+```
+2
+X 11
+X 22
+X 33
+Y 11
+Y 22
+Y 33
+BREAK
+```
+
+Python Break statement flowchart.
+
+## 18) What is tuple in Python?
+
+A tuple is a built-in data collection type. It allows us to store values in a sequence. It is immutable, so no change is reflected in the original data. It uses () brackets rather than [] square brackets to create a tuple. We cannot remove any element but can find in the tuple. We can use indexing to get elements. It also allows traversing elements in reverse order by using negative indexing. Tuple supports various methods like max(), sum(), sorted(), Len() etc.
+
+To create a tuple, we can declare it as below.
+
+**Example:**
+```python
+# Declaring tuple   
+tup = (2,4,6,8)   
+# Displaying value   
+print(tup)   
+   
+# Displaying Single value   
+print(tup[2])
+```
+
+**Output:**
+```
+(2, 4, 6, 8)
+6
+```
+
+It is immutable. So updating tuple will lead to an error.
+
+**Example:**
+```python
+# Declaring tuple   
+tup = (2,4,6,8)   
+# Displaying value   
+print(tup)   
+   
+# Displaying Single value   
+print(tup[2])   
+   
+# Updating by assigning new value   
+tup[2]=22   
+# Displaying Single value   
+print(tup[2])
+```
+
+**Output:**
+```
+tup[2]=22  
+TypeError: 'tuple' object does not support item assignment  
+(2, 4, 6, 8)
+```
+
+<!-- Page 6 -->
+
+## 19) Which are the file related libraries/modules in Python?
+
+The Python provides libraries/modules that enable you to manipulate text files and binary files on the file system. It helps to create files, update their contents, copy, and delete files. The libraries are os, os.path, and shutil.
+
+Here, os and os.path - modules include a function for accessing the filesystem while shutil - module enables you to copy and delete the files.
+
+## 20) What are the different file processing modes supported by Python?
+
+Python provides four modes to open files. The read-only (r), write-only (w), read-write (rw) and append mode (a). 'r' is used to open a file in read-only mode, 'w' is used to open a file in write-only mode, 'rw' is used to open in reading and write mode, 'a' is used to open a file in append mode. If the mode is not specified, by default file opens in read-only mode.
+
+- **Read-only mode (r):** Open a file for reading. It is the default mode.
+- **Write-only mode (w):** Open a file for writing. If the file contains data, data would be lost. Other a new file is created.
+- **Read-Write mode (rw):** Open a file for reading, write mode. It means updating mode.
+- **Append mode (a):** Open for writing, append to the end of the file, if the file exists.
+
+## 21) What is an operator in Python?
+
+An operator is a particular symbol which is used on some values and produces an output as a result. An operator works on operands. Operands are numeric literals or variables which hold some values. Operators can be unary, binary or ternary. An operator which requires a single operand known as a unary operator, which require two operands known as a binary operator and which require three operands is called ternary operator.
+
+**Example:**
+```python
+# Unary Operator   
+A = 12   
+B = -(A)   
+print (B)   
+# Binary Operator   
+A = 12   
+B = 13   
+print (A + B)   
+print (B * A)   
+#Ternary Operator   
+A = 12   
+B = 13   
+min = A if A < B else B   
+     
+print(min)
+```
+
+**Output:**
+```
+# Unary Operator
+-12
+# Binary Operator
+25
+156
+# Ternary Operator
+12
 ```
