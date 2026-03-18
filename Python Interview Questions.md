@@ -656,4 +656,210 @@ Output:
 -11
 276
 0.5217391304347826
+```<!-- Page 9 -->
+
+Relational Operators are used to comparing the values. These operators test the conditions and then returns a boolean value either True or False.
+
+# Examples of Relational Operators
+
+Example:
+
+```python
+a, b = 10, 12
+print(a==b) # False
+print(a<b) # True
+print(a<=b) # True
+print(a!=b) # True
 ```
+
+Output:
+```
+False
+True
+True
+True
+```
+
+Assignment operators are used to assigning values to the variables. See the examples below.
+
+Example:
+
+```python
+# Examples of Assignment operators
+a=12
+print(a) # 12
+a += 2
+print(a) # 14
+a -= 2
+print(a) # 12
+a *=2
+print(a) # 24
+a **=2
+print(a) # 576
+```
+
+Output:
+```
+12
+14
+12
+24
+576
+```
+
+Logical operators are used to performing logical operations like And, Or, and Not. See the example below.
+
+Example:
+
+```python
+# Logical operator examples
+a = True
+b = False
+print(a and b) # False
+print(a or b) # True
+print(not b) # True
+```
+
+Output:
+```
+False
+True
+True
+```
+
+Membership operators are used to checking whether an element is a member of the sequence (list, dictionary, tuples) or not. Python uses two membership operators in and not in operators to check element presence. See an example.
+
+Example:
+
+```python
+# Membership operators examples
+list = [2,4,6,7,3,4]
+print(5 in list) # False
+cities = ("india","delhi")
+print("tokyo" not in cities) #True
+```
+
+Output:
+```
+False
+True
+```
+
+Identity Operators (is and is not) both are used to check two values or variable which are located on the same part of the memory. Two variables that are equal does not imply that they are identical. See the following examples.
+
+Example:
+
+```python
+# Identity operator example
+a = 10
+b = 12
+print(a is b) # False
+print(a is not b) # True
+```
+
+Output:
+```
+False
+True
+```
+
+Bitwise Operators are used to performing operations over the bits. The binary operators (&, |, OR) work on bits. See the example below.
+
+Example:
+
+```python
+# Identity operator example
+a = 10
+b = 12
+print(a & b) # 8
+print(a | b) # 14
+print(a ^ b) # 6
+print(~a) # -11
+```
+
+Output:
+```
+8
+14
+6
+-11
+```
+
+<!-- Page 10 -->
+
+## 23) How to create a Unicode string in Python?
+
+In Python 3, the old Unicode type has replaced by "str" type, and the string is treated as Unicode by default. We can make a string in Unicode by using art.title.encode("utf-8") function.
+
+Example:
+
+```python
+unicode_1 = ("\u0123", "\u2665", "\U0001f638", "\u265E", "\u265F", "\u2168")
+print (unicode_1)
+```
+
+Output:
+```
+unicode_1: ('ģ', '♥', '😸', '♞', '♟', 'Ⅸ')
+```
+
+**[Image: Page 10]:**
+Table showing Unicode characters with their codes:
+| Unicode Code | Character | Description |
+|--------------|-----------|-------------|
+| \u0123 | ģ | Latin small letter g with cedilla |
+| \u2665 | ♥ | Black heart suit |
+| \U0001f638 | 😸 | Grinning cat face with smiling eyes |
+| \u265E | ♞ | Black chess knight |
+| \u265F | ♟ | Black chess pawn |
+| \u2168 | Ⅸ | Roman numeral nine |
+
+## 24) is Python interpreted language?
+
+Python is an interpreted language. The Python language program runs directly from the source code. It converts the source code into an intermediate language code, which is again translated into machine language that has to be executed.
+
+Unlike Java or C, Python does not require compilation before execution.
+
+**[Image: Page 10]:**
+Flowchart showing Python execution process:
+1. "Source Code (.py)" → 
+2. "Python Interpreter" → 
+3. "Bytecode (.pyc)" → 
+4. "Python Virtual Machine (PVM)" → 
+5. "Machine Code" → 
+6. "Execution"
+
+Arrows connect each step showing the flow from source code to final execution.
+
+## 25) How is memory managed in Python?
+
+Memory is managed in Python in the following ways:
+
+- Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+- The allocation of heap space for Python objects is done by Python's memory manager. The core API gives access to some tools for the programmer to code.
+- Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+
+## 26) What is the Python decorator?
+
+Decorators are very powerful and a useful tool in Python that allows the programmers to add functionality to an existing code. This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time. It allows the user to wrap another function to extend the behaviour of the wrapped function, without permanently modifying it.
+
+Example:
+
+```python
+def function_is_called():
+    def function_is_returned():
+        print("JavaTpoint")
+    return function_is_returned
+new_1 = function_is_called()
+# Outputs "JavaTpoint"
+new_1()
+```
+
+Output:
+```
+JavaTpoint
+```
+
+Functions vs. Decorators
+
+A function is a block of code that performs a specific task whereas a decorator is a function that modifies other functions.
