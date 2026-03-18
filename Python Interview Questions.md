@@ -184,4 +184,41 @@ print(word)
 None
 ```
 
+---## Python Interview Questions
+
+A list of frequently asked Python interview questions with answers for freshers and experienced are given below.
+
+### 1) What is Python?
+
+Python was created by Guido van Rossum, and released in 1991.
+
+It is a general-purpose computer programming language. It is a high-level, object-oriented language which can run equally on different platforms such as Windows, Linux, UNIX, and Macintosh. Its high-level built-in data structures, combined with dynamic typing and dynamic binding. It is widely used in data science, machine learning and artificial intelligence domain.
+
+It is easy to learn and require less code to develop the applications.
+
+45.5M
+
+823
+
+Java Try Catch
+
+It is widely used for:
+
+- Web development (server-side).
+- Software development.
+- Mathematics.
+- System scripting.
+
+### 2) Why Python?
+
+- Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+- Python is compatible with different platforms like Windows, Mac, Linux, Raspberry Pi, etc.
+- Python has a simple syntax as compared to other languages.
+- Python allows a developer to write programs with fewer lines than some other programming languages.
+- Python runs on an interpreter system, means that the code can be executed as soon as it is written. It helps to provide a prototype very quickly.
+- Python can be described as a procedural way, an object-orientated way or a functional way.
+- The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+
+---
+<!-- Batch 1 ends | Batch 2 begins -->
 ---
