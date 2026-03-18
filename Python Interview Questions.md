@@ -1854,4 +1854,149 @@ Email id:  rahul@gmail.com
 
 ---
 
+---## 11) What is the difference between remove() function and del statement?
+
+The user can use the remove() function to delete a specific object in the list.
+
+**Example:**
+
+```python
+list_1 = [ 3, 5, 7, 3, 9, 3 ]    
+print(list_1)   
+list_1.remove(3)    
+print("After removal: ", list_1)
+```
+
+**Output:**
+
+```
+[3, 5, 7, 3, 9, 3] 
+After removal: [5, 7, 3, 9, 3]
+```
+
+If you want to delete an object at a specific location (index) in the list, you can either use del or pop.
+
+**Example:**
+
+```python
+list_1 = [ 3, 5, 7, 3, 9, 3 ]    
+print(list_1)   
+del list_1[2]   
+print("After deleting: ", list_1)
+```
+
+**Output:**
+
+```
+[3, 5, 7, 3, 9, 3] 
+After deleting: [3, 5, 3, 9, 3]
+```
+
+**Note:** You don't need to import any extra module to use these functions for removing an element from the list.
+
+We cannot use these methods with a tuple because the tuple is different from the list.
+
+## 12) What is swapcase() function in the Python?
+
+It is a string's function which converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. If the string is in lowercase, it generates a small case string and vice versa. It automatically ignores all the non-alphabetic characters. See an example below.
+
+**Example:**
+
+```python
+string = "IT IS IN LOWERCASE."   
+print(string.swapcase())   
+   
+string = "it is in uppercase."   
+print(string.swapcase())
+```
+
+**Output:**
+
+```
+it is in lowercase.  
+IT IS IN UPPERCASE.
+```
+
+## 13) How to remove whitespaces from a string in Python?
+
+To remove the whitespaces and trailing spaces from the string, Python providies strip([str]) built-in function. This function returns a copy of the string after removing whitespaces if present. Otherwise returns original string.
+
+**Example:**
+
+```python
+string = "  javatpoint "   
+string2 = "    javatpoint        "   
+string3 = "       javatpoint"   
+print(string)   
+print(string2)   
+print(string3)   
+print("After stripping all have placed in a sequence:")   
+print(string.strip())   
+print(string2.strip())   
+print(string3.strip())
+```
+
+**Output:**
+
+```
+javatpoint  
+    javatpoint         
+       javatpoint 
+After stripping all have placed in a sequence: 
+Javatpoint 
+javatpoint 
+javatpoint
+```
+
+## 14) How to remove leading whitespaces from a string in the Python?
+
+To remove leading characters from a string, we can use lstrip() function. It is Python string function which takes an optional char type parameter. If a parameter is provided, it removes the character. Otherwise, it removes all the leading spaces from the string.
+
+**Example:**
+
+```python
+string = "  javatpoint "    
+string2 = "    javatpoint        "   
+print(string)   
+print(string2)   
+print("After stripping all leading whitespaces:")   
+print(string.lstrip())   
+print(string2.lstrip())
+```
+
+**Output:**
+
+```
+javatpoint  
+    javatpoint         
+After stripping all leading whitespaces: 
+javatpoint  
+javatpoint
+```
+
+After stripping, all the whitespaces are removed, and now the string looks like the below:
+
+## 15) Why do we use join() function in Python?
+
+The join() is defined as a string method which returns a string value. It is concatenated with the elements of an iterable. It provides a flexible way to concatenate the strings. See an example below.
+
+**Example:**
+
+```python
+str = "Rohan"   
+str2 = "ab"   
+# Calling function     
+str2 = str.join(str2)     
+# Displaying result     
+print(str2)
+```
+
+**Output:**
+
+```
+aRohanb
+```
+
+---
+
 ---
