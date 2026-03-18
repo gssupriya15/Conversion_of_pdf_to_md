@@ -2552,4 +2552,45 @@ The negative index is used to remove any new-line spaces from the string and all
 
 ---
 
+---## 36) What is pickling and unpickling in Python?
+
+The Python pickle is defined as a module which accepts any Python object and converts it into a string representation. It dumps the Python object into a file using the dump function; this process is called Pickling.
+
+The process of retrieving the original Python objects from the stored string representation is called as Unpickling.
+
+## 37) Which programming language is a good choice between Java and Python?
+
+Java and Python both are object-oriented programming languages. Let's compare both on some criteria given below:
+
+| Criteria | Java | Python |
+|----------|------|--------|
+| Ease of use | Good | Very Good |
+| Coding Speed | Average | Excellent |
+| Data types | Static type | Dynamic type |
+| Data Science and Machine learning application | Average | Very Good |
+
+## 38) What is the usage of help() and dir() function in Python?
+
+Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions.
+
+**Help() function:** The help() function is used to display the documentation string and also facilitates us to see the help related to modules, keywords, and attributes.
+
+**Dir() function:** The dir() function is used to display the defined symbols.
+
+## 39) What are the differences between Python 2.x and Python 3.x?
+
+Python 2.x is an older version of Python. Python 3.x is newer and latest version. Python 2.x is legacy now. Python 3.x is the present and future of this language.
+
+The most visible difference between Python2 and Python3 is in print statement (function). In Python 2, it looks like print "Hello", and in Python 3, it is print ("Hello").
+
+String in Python2 is ASCII implicitly, and in Python3 it is Unicode.
+
+The xrange() method has removed from Python 3 version. A new keyword as is introduced in Error handling.
+
+## 40) How Python does Compile-time and Run-time code checking?
+
+In Python, some amount of coding is done at compile time, but most of the checking such as type, name, etc. are postponed until code execution. Consequently, if the Python code references a user-defined function that does not exist, the code will compile successfully. The Python code will fail only with an exception when the code execution path does not exist.
+
+---
+
 ---
