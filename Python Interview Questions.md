@@ -1338,3 +1338,79 @@ message = "Message_sender_need_to_send"
 # Sending the mail     
 s.sendmail("sender@email_id ", "receiver@email_id", message)
 ```
+
+---
+<!-- Batch 9 ends | Batch 10 begins -->
+---
+
+## 46) What is the difference between Python Arrays and lists?
+
+Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
+
+**Example:**
+
+```python
+import array as arr   
+User_Array = arr.array('i', [1,2,3,4])   
+User_list = [1, 'abc', 1.20]   
+print (User_Array)   
+print (User_list)
+```
+
+**Output:**
+```
+array('i', [1, 2, 3, 4]) 
+[1, 'abc', 1.2]
+```
+
+## 47) What is lambda function in Python?
+
+The anonymous function in python is a function that is defined without a name. The normal functions are defined using a keyword "def", whereas, the anonymous functions are defined using the lambda function. The anonymous functions are also called as lambda functions.
+
+## 48) Why do lambda forms in Python not have the statements?
+
+Lambda forms in Python does not have the statement because it is used to make the new function object and return them in runtime.
+
+## 49) What are functions in Python?
+
+A function is a block of code which is executed only when it is called. To define a Python function, the def keyword is used.
+
+**Example:**
+
+```python
+def New_func():   
+    print ("Hi, Welcome to JavaTpoint")   
+New_func() #calling the function
+```
+
+**Output:**
+```
+Hi, Welcome to JavaTpoint
+```
+
+## 50) What is __init__?
+
+The __init__ is a method or constructor in Python. This method is automatically called to allocate memory when a new object/ instance of a class is created. All classes have the __init__ method.
+
+**Example:**
+
+```python
+class Employee_1:   
+    def __init__(self, name, age,salary):   
+        self.name = name   
+        self.age = age   
+        self.salary = 20000   
+E_1 = Employee_1("pqr", 20, 25000)   
+# E1 is the instance of class Employee.   
+#__init__ allocates memory for E1.    
+print(E_1.name)   
+print(E_1.age)   
+print(E_1.salary)
+```
+
+**Output:**
+```
+pqr 
+20 
+25000
+```
