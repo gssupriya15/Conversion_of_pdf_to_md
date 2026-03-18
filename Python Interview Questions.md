@@ -2593,4 +2593,95 @@ In Python, some amount of coding is done at compile time, but most of the checki
 
 ---
 
+---## 41) What is the shortest method to open a text file and display its content?
+
+The shortest way to open a text file is by using "with" command in the following manner:
+
+**Example:**
+
+```python
+with open("FILE NAME", "r") as fp:   
+    fileData = fp.read()     
+# To print the contents of the file      
+print(fileData)
+```
+
+**Output:**
+
+```
+"The data of the file will be printed."
+```
+
+## 42) What is the usage of enumerate () function in Python?
+
+The enumerate() function is used to iterate through the sequence and retrieve the index position and its corresponding value at the same time.
+
+**Example:**
+
+```python
+list_1 = ["A","B","C"]   
+s_1 = "Javatpoint"    
+# creating enumerate objects   
+object_1 = enumerate(list_1)   
+object_2 = enumerate(s_1)   
+    
+print ("Return type:",type(object_1))   
+print (list(enumerate(list_1)))   
+print (list(enumerate(s_1)))
+```
+
+**Output:**
+
+```
+Return type:  
+[(0, 'A'), (1, 'B'), (2, 'C')] 
+[(0, 'J'), (1, 'a'), (2, 'v'), (3, 'a'), (4, 't'), (5, 'p'), (6, 'o'), (7, 'i'), (8, 'n'), (9, 't')]
+```
+
+## 43) Give the output of this example: A[3] if A=[1,4,6,7,9,66,4,94].
+
+Since indexing starts from zero, an element present at 3rd index is 7. So, the output is 7.
+
+## 44) What is type conversion in Python?
+
+Type conversion refers to the conversion of one data type iinto another.
+
+- **int()** - converts any data type into integer type
+- **float()** - converts any data type into float type
+- **ord()** - converts characters into integer
+- **hex()** - converts integers to hexadecimal
+- **oct()** - converts integer to octal
+- **tuple()** - This function is used to convert to a tuple.
+- **set()** - This function returns the type after converting to set.
+- **list()** - This function is used to convert any data type to a list type.
+- **dict()** - This function is used to convert a tuple of order (key,value) into a dictionary.
+- **str()** - Used to convert integer into a string.
+- **complex(real,imag)** - This functionconverts real numbers to complex(real,imag) number.
+
+## 45) How to send an email in Python Language?
+
+To send an email, Python provides smtplib and email modules. Import these modules into the created mail script and send mail by authenticating a user.
+
+It has a method SMTP(smtp-server, port). It requires two parameters to establish SMTP connection.
+
+A simple example to send an email is given below.
+
+**Example:**
+
+```python
+import smtplib     
+# Calling SMTP     
+s = smtplib.SMTP('smtp.gmail.com', 587)     
+# TLS for network security     
+s.starttls()     
+# User email Authentication     
+s.login("sender@email_id", "sender_email_id_password")     
+# Message to be sent     
+message = "Message_sender_need_to_send"     
+# Sending the mail     
+s.sendmail("sender@email_id ", "receiver@email_id", message)
+```
+
+---
+
 ---
